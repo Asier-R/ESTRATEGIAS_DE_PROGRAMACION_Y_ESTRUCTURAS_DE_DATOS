@@ -1,4 +1,4 @@
-package pruebas_01;
+package capitulo_03;
 
 public class Squares{
 

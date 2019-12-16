@@ -1,4 +1,4 @@
-package pruebas_01;
+package capitulo_03;
 /**
  * Una clase que suma de uno en uno cada segundo
  * mediante el uso de la interfaz Runnable

@@ -1,10 +1,7 @@
-package pruebas_01;
+package capitulo_03;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.NoSuchElementException;
-import java.util.Random;
-import java.util.Scanner;
+import static java.lang.Math.*;
 
 public class Main{
 
@@ -54,6 +51,9 @@ public class Main{
         System.out.println("bg2==bg3? --> "+(bg2==bg3));
         System.out.println("bg equals bg2? --> "+(bg.equals(bg2)));
         System.out.println("bg2 equals bg3? --> "+(bg2.equals(bg3)));
+
+        System.out.println("Usar el numero PI sin escribir Math.PI --> "+PI);
+        System.out.println("Para ello importamos el paquete Math de la siguiente manera: import java.lang.Math.*;");
 
     }
 
