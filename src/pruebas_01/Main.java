@@ -1,5 +1,6 @@
 package pruebas_01;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -12,7 +13,7 @@ public class Main{
         //Thread hilo = new Thread(miTen);
         //hilo.start();
 
-        Scanner in = new Scanner(System.in);
+        /*Scanner in = new Scanner(System.in);
 
         System.out.println("Enter 2 ints on one line: ");
         try{
@@ -40,7 +41,19 @@ public class Main{
 
         System.out.println(Extension.a);
         Extension.a++;
-        System.out.println(Extension.a);
+        System.out.println(Extension.a);*/
+
+        BigRational bg = new BigRational(new BigInteger("1"),new BigInteger("3"));
+        BigRational bg2 = new BigRational(new BigInteger("3"),new BigInteger("2"));
+        BigRational bg3 = new BigRational(new BigInteger("3"),new BigInteger("2"));
+
+        BigRational bgR = bg.divide(bg2);
+        System.out.println("RESULTADO: "+bgR.toString());
+
+        System.out.println("bg==bg2? --> "+(bg==bg2));
+        System.out.println("bg2==bg3? --> "+(bg2==bg3));
+        System.out.println("bg equals bg2? --> "+(bg.equals(bg2)));
+        System.out.println("bg2 equals bg3? --> "+(bg2.equals(bg3)));
 
     }
 

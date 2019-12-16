@@ -107,7 +107,7 @@ public class BigRational {
         BigRational rhs = (BigRational) other;
 
         return num.equals(rhs.num) && den.equals(rhs.den);
-    }
+}
 
     public String toString(){
         if(den.equals(BigInteger.ZERO))
