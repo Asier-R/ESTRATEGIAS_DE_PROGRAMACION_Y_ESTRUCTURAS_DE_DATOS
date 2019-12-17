@@ -15,19 +15,19 @@ public class Person {
         return "Name: "+getName()+"  Age: "+getAge();
     }
 
-    public void setAge(int age) {
+    public final void setAge(int age) {
         this.age = age;
     }
 
-    public void setName(String name) {
+    public final void setName(String name) {
         this.name = name;
     }
 
-    public int getAge() {
+    public final int getAge() {
         return age;
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 }
