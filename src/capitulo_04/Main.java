@@ -106,6 +106,9 @@ public class Main {
     // APARTADO (4.8) //
     // Se crea una interfaz llamada "Comparator" para que los objetos que las crean implementen la funcion "compare"
     // De esta forma el metodo "findMaxFunctor" puede recibir dicho objeto y llamar a la funcion "compare"
+    // compare(T lhs, T rhs) recibe los dos elementos a comparar. En esta funcion uno es el elemento del array
+    // señalado por el indice, y el otro es el ultimo elemento mas grande. Este elemento se actualiza en cada iteracion
+    // hasta terminar el for, devolviendo el ultimo elemento almacenado (el mas grande).
     public static <T> T findMaxFunctor(T [] a, Comparator<? super T> cmp){
         int maxIndex = 0;
 
