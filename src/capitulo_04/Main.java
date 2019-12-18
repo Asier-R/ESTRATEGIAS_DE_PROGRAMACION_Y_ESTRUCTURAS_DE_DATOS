@@ -102,4 +102,17 @@ public class Main {
 
         return a[maxIndex];
     }
+
+    // APARTADO (4.8) //
+    // Se crea una interfaz llamada "Comparator" para que los objetos que las crean implementen la funcion "compare"
+    // De esta forma el metodo "findMaxFunctor" puede recibir dicho objeto y llamar a la funcion "compare"
+    public static <T> T findMaxFunctor(T [] a, Comparator<? super T> cmp){
+        int maxIndex = 0;
+
+        for(int i=1; i<a.length; i++)
+            if(cmp.compare(a[i], a[maxIndex]) > 0)
+                maxIndex = i;
+
+        return a[maxIndex];
+    }
 }
