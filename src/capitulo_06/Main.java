@@ -1,6 +1,5 @@
 package capitulo_06;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 public class Main {
@@ -11,7 +10,7 @@ public class Main {
 
         MyContainer con1 = new MyContainer(array);
 
-        Iterator_2 it = con1.iterator();
+        Iterator it = con1.iterator();
 
         while (it.hasNext()) {
             System.out.print("\t" + it.next());

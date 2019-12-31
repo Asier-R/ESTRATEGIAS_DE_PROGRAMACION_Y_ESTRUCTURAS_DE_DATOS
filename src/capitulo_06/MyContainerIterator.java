@@ -1,6 +1,6 @@
 package capitulo_06;
 
-class MyContainerIterator implements Iterator_2 {
+class MyContainerIterator implements Iterator {
 
     private int current = 0;
     private MyContainer container;

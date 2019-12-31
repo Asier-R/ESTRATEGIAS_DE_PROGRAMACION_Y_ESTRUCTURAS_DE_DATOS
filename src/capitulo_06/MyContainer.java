@@ -14,7 +14,7 @@ public class MyContainer {
         size = array.length;
     }
 
-    public Iterator_2 iterator(){
+    public Iterator iterator(){
         return new MyContainerIterator(this);
     }
 

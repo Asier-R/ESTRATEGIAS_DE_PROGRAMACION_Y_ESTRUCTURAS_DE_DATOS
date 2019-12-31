@@ -1,8 +1,24 @@
 package capitulo_06;
 
-public interface Iterator {
+/**
+ * Interfaz Iterator.
+ * @param <T>
+ */
+public interface Iterator<T> extends java.util.Iterator<T> {
 
+    /**
+     * Comprueba si hay elementos sobre lo que todavia no se haya iterado.
+     */
     boolean hasNext();
-    Object next();
 
+    /**
+     * Obtiene el siguiente elemento (todavia no visualizado) de la coleccion.
+     */
+    T next();
+
+    /**
+     * Elimina el ultimo elemento devuelto por next.
+     * Solo se puede invocar una vez despues de invocar next.
+     */
+    void remove();
 }

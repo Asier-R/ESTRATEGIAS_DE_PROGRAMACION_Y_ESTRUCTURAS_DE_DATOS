@@ -1,8 +1,6 @@
 package capitulo_04;
 
-import java.util.Random;
-
-public class Person implements Comparable{
+public class Person implements Comparable<Person>{
 
     private int age;
     private String name;
@@ -45,8 +43,8 @@ public class Person implements Comparable{
     }
 
     @Override
-    public int compareTo(Object person) {
-        Person p = (Person)person;
+    public int compareTo(Person person) {
+        Person p = person;
         if(this.id < p.getId()){
             return -1;
         }else if(this.getId() == p.getId()){
