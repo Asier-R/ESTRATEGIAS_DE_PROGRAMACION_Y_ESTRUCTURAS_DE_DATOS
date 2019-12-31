@@ -9,8 +9,13 @@ public class Student extends Person{
         this.gpa = gpa;
     }
 
+    public Student(String name, int age, int id, int gpa) {
+        super(name, age, id);
+        this.gpa = gpa;
+    }
+
     public String toString(){
-        return "Name: "+getName()+"  Age: "+getAge()+"  Gpa: "+getGpa();
+        return "Name: "+getName()+"  Age: "+getAge()+"  Gpa: "+getGpa()+"  id: "+getId();
     }
 
     public int getGpa() {
@@ -20,4 +25,6 @@ public class Student extends Person{
     public void setGpa(int gpa) {
         this.gpa = gpa;
     }
+
+
 }

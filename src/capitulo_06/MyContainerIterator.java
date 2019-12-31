@@ -1,6 +1,6 @@
 package capitulo_06;
 
-class MyContainerIterator implements Iterator {
+class MyContainerIterator implements Iterator_2 {
 
     private int current = 0;
     private MyContainer container;
@@ -15,6 +15,11 @@ class MyContainerIterator implements Iterator {
 
     public Object next(){
         return container.items[current++];
+    }
+
+    @Override
+    public void remove() {
+
     }
 
 }

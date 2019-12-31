@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-
+        System.out.println("------------------------------------------------------------------------------------");
         Person p = new Person("Abundio", 33);
         Student s = new Student("Adolf", 88,66);
 
@@ -18,8 +18,10 @@ public class Main {
         // haciendo el casting a student si que se puede acceder a los metodos de student
         newX.setGpa(22);
         System.out.println(newX.toString());
+        System.out.println("------------------------------------------------------------------------------------");
 
         // APARTADO (4.6) //
+        System.out.println("------------------------------------------------------------------------------------");
         BigInteger[] marra = {new BigInteger("12"),new BigInteger("29"),new BigInteger("212"),new BigInteger("22")};
         System.out.println("Max Number: "+findMax(marra));
 
@@ -38,9 +40,11 @@ public class Main {
         System.out.println("Marcos id: "+marcos.getId());
         System.out.println("Pablo id: "+pablo.getId());
         System.out.println("Max id: "+findMax(arrP));
-        System.out.println();
+        System.out.println("------------------------------------------------------------------------------------");
+
 
         // Apartado (4.7.6) //
+        System.out.println("------------------------------------------------------------------------------------");
         GenericSimpleArrayList<Person> listaPersonas = new GenericSimpleArrayList<>();
         listaPersonas.add(juan);
         listaPersonas.add(ana);
@@ -50,6 +54,24 @@ public class Main {
         for(int i=0; i<listaPersonas.size(); i++){
             System.out.println("Persona num: "+i+"    Datos:\n"+listaPersonas.get(i).toString()+"\n");
         }
+        System.out.println("------------------------------------------------------------------------------------");
+
+
+        // Apartado (4.8) //
+        System.out.println("------------------------------------------------------------------------------------");
+        Student juantxo = new Student("Juantxo", 33,5);
+        Student anatxu = new Student("Anatxu",44,5);
+        Student markos = new Student("Markos",54,5);
+        Student pabloa = new Student("Pabloa",54,10);
+        Student[] arrS = {juantxo,anatxu,markos,pabloa};
+        System.out.println();
+        System.out.println("Juantxo id: "+juantxo.getId());
+        System.out.println("Anatxu id: "+anatxu.getId());
+        System.out.println("Markos id: "+markos.getId());
+        System.out.println("Pabloa id: "+pabloa.getId());
+        System.out.println("FindMaxFUNCTOR: "+findMaxFunctor(arrS, new objetoFunctor()));
+        // Solo se crea el objetoFunctor para poder usar su funcion compare ---> Functor
+        System.out.println("------------------------------------------------------------------------------------");
 
 
     }

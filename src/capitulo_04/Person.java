@@ -14,6 +14,12 @@ public class Person implements Comparable{
         this.id = (int)(Math.round(Math.random()*1000)+1);
     }
 
+    public Person (String name, int age, int id){
+        this.age = age;
+        this.name = name;
+        this.id = id;
+    }
+
     public String toString(){
         return "Name: "+getName()+"  Age: "+getAge()+"  id: "+getId();
     }

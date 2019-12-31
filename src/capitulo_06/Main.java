@@ -1,5 +1,6 @@
 package capitulo_06;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class Main {
@@ -10,14 +11,15 @@ public class Main {
 
         MyContainer con1 = new MyContainer(array);
 
-        Iterator it = con1.iterator();
+        Iterator_2 it = con1.iterator();
 
         while (it.hasNext()) {
             System.out.print("\t" + it.next());
         }
     }
 
-    // Imprime el contenido de Collection c (usando el iterador directamente)
+    // Imprime el contenido de Collection c (usando el iterador de java.util directamente)
+    // Para poder usar Iterador_2, habria que hacer casting --> Iterador_2<T> itr = (Iterador_2<T>) c.iterator();
     public static <T> void printCollection(Collection<T> c) {
 
         java.util.Iterator<T> itr = c.iterator();
