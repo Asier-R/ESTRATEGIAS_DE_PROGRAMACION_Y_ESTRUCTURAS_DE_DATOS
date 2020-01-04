@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -37,6 +38,34 @@ public class Main {
         else if(posi2<-1) System.out.println("Elemento mayor que los del array, ira justo despues del ultimo");
         else System.out.println("Elemento en la posicion "+posi2);
         System.out.println("Posi: "+posi2);
+        System.out.println("---------------------------------------------------------------------");
+
+        // java.util
+        // Iterador
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(2);
+        lst.add(4);
+        lst.add(6);
+        ListIterator<Integer> itr1 = lst.listIterator(0);
+        ListIterator<Integer> itr2 = lst.listIterator(lst.size());
+
+        System.out.println("Fordward: ");
+        while (itr1.hasNext()) System.out.println(itr1.next()+" ");
+        System.out.println();
+
+        System.out.println("Backward: ");
+        while (itr2.hasPrevious()) System.out.println(itr2.previous()+" ");
+        System.out.println();
+
+        System.out.println("Backward: ");
+        while (itr2.hasPrevious()) System.out.println(itr2.previous()+" ");
+        System.out.println();
+
+        System.out.println("Forward: ");
+        for(Integer e: lst) System.out.println(e+" ");
+        System.out.println();
+        System.out.println("---------------------------------------------------------------------");
+
     }
 
     // Imprime el contenido de Collection c (usando el iterador de java.util directamente)
