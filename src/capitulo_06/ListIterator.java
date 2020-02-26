@@ -20,6 +20,7 @@ public interface ListIterator<T> extends Iterator {
     /**
      * Elimina el ultima elemento devuelto por next o previous.
      * Solo puede invocarse una unica vez despues de next o previous.
+     * Se incluye en la interfaz para sustituir la salida javadoc generada para remove.
      */
     void remove();
 

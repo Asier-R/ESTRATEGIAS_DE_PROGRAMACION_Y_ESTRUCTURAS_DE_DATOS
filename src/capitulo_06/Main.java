@@ -66,6 +66,17 @@ public class Main {
         System.out.println();
         System.out.println("---------------------------------------------------------------------");
 
+        String[] mirra = {"uno","dos","tres","cuatro"};
+        ArrayList<String> mirras = new ArrayList<String>(Arrays.asList(mirra));
+        java.util.Iterator itr  = mirras.iterator();
+        System.out.println("tamano: "+mirras.size());
+        while(itr.hasNext()){
+            System.out.println("ele: "+itr.next());
+            itr.remove();
+        }
+        System.out.println("tamano: "+mirras.size());
+        System.out.println("---------------------------------------------------------------------");
+
     }
 
     // Imprime el contenido de Collection c (usando el iterador de java.util directamente)
