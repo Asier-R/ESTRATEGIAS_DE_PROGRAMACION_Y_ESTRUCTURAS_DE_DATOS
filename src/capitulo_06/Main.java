@@ -75,6 +75,17 @@ public class Main {
             itr.remove();
         }
         System.out.println("tamano: "+mirras.size());
+
+        mirras = new ArrayList<String>(Arrays.asList(mirra));
+        itr  = mirras.iterator();
+        System.out.println("0-tamano: "+mirras.size());
+        System.out.println("1-Tiene siguiente? "+itr.hasNext());
+        System.out.println("1-El siguiente: "+itr.next());
+        System.out.println("2-Tiene siguiente? "+itr.hasNext());
+        System.out.println("2-El siguiente: "+itr.next());
+        System.out.println("3-Tiene siguiente? "+itr.hasNext());
+        System.out.println("3-El siguiente: "+itr.next());
+        System.out.println("4-tamano: "+mirras.size());
         System.out.println("---------------------------------------------------------------------");
 
     }
