@@ -4,7 +4,7 @@ public interface IteratorIF<E> {
 
     /**
      * Obtiene el siguiente elemento de la iteracion.
-     * @pre: hasNext()
+     * @pre hasNext()
      * @return E el siguiente elemento de la iteracion.
      */
     public E next();

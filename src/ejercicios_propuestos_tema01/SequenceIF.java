@@ -5,7 +5,7 @@ package ejercicios_propuestos_tema01;
  * elementos que se organizan linealmente.
  * @param <E>
  */
-public interface SecuenceIF<E> extends CollectionIF<E> {
+public interface SequenceIF<E> extends CollectionIF<E> {
 
     /**
      * @return devuelve un iterador apropiado para la secuencia.

@@ -3,7 +3,7 @@ package ejercicios_propuestos_tema01;
 public class Main {
 
     public static void main(String[] args) {
-
+        // PRUEBAS //
         class ListIP<String> implements ListIPIF<String> {
             private int pointer = 0;
             private String[] lista;
@@ -49,6 +49,10 @@ public class Main {
             public String get() {return null;}
             @Override
             public void remove() {}
+            @Override
+            public int movePointerForward() {return 0;}
+            @Override
+            public int movePointerBackwards() {return 0;}
             @Override
             public int size() {return 0;}
             @Override
