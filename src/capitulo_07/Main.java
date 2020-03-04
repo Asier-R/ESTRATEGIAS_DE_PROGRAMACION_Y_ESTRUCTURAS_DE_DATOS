@@ -6,6 +6,28 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        printDecimal(1369);
+        printDecimal(12);
+        System.out.println("n%10: "+(13%10));
+        System.out.println("n%10: "+(12%10));
+        System.out.println("n%10: "+((char)('0'+(1%10))));
+        System.out.println("-- 16 ---------------------------");
+        printInt(12,16);
+        System.out.println("-- 8 ---------------------------");
+        printInt(12,8);
+        System.out.println("-- 2 ---------------------------");
+        printInt(12,2);
+        System.out.println("--------------------------------");
+        System.out.println("n%base: "+((12)%2));
+        System.out.println("n%base: "+((12/2)%2));
+        System.out.println("n%base: "+((6/2)%2));
+        System.out.println("n%base: "+((3/2)%2));
+        System.out.println("--------------------------------");
+        System.out.println("n%base: "+(1%8));
+        System.out.println("n%base: "+(1%16));
+        System.out.println("--------------------------------");
+        //printInt(12,1);//Caso que falla
+
 
     }
 
@@ -19,7 +41,7 @@ public class Main {
         if(n>=10){
             printDecimal(n/10);
         }
-        System.out.println((char)('0'+(n%10)));
+        System.out.println((char)('0'+(n%10))+"    n: "+n);
     }
 
     /**
