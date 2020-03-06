@@ -27,6 +27,7 @@ public class Main {
         System.out.println("n%base: "+(1%16));
         System.out.println("--------------------------------");
         //printInt(12,1);//Caso que falla
+        System.out.println(factorial(5));
 
 
     }
@@ -62,4 +63,44 @@ public class Main {
         System.out.println(DIGIT_TABLE.charAt((int)(n % base)));
     }
 
+    /**
+     * Calcula el factorial de n
+     * @param n el numero entero cuyo factorial se quiere calcular
+     * @return n!
+     */
+    public static long factorial(int n){
+        if(n<=1) return 1;
+        return n*factorial(n-1);
+    }
+
+    /**
+     * Realiza la busqueda binaria estandar untilizando dos comparaciones por nivel.
+     * Esta rutina de preparacion llama al metodo recursivo.
+     * @param a coleccion en la que buscar el elemento
+     * @param x elemento a buscar
+     * @param <E> tipo de dato de la coleccion
+     * @return 0 --> no lo encuentra; mid --> posicion del elemento en la coleccion
+     */
+    public static<E extends Comparable<? super E>> int binarySearch(E[]a, E x){
+        return binarySearch(a,x,0,a.length-1);
+    }
+
+    /**
+     * Rutina recursiva oculta de busqueda binaria.
+     * @param a coleccion en la que buscar el elemento
+     * @param x elemento a buscar
+     * @param low extremo mas pequeño de la coleccion
+     * @param high extremo mas grande de la coleccion
+     * @param <E> tipo de dato de la coleccion
+     * @return 0 --> no lo encuentra; mid --> posicion del elemento en la coleccion
+     */
+    private static <E extends Comparable<? super E>> int binarySearch(E[]a, E x, int low, int high){
+        if(low > high) return 0;
+
+        int mid = (low+high)/2;
+
+        if(a[mid].compareTo(x)<0) return binarySearch(a,x,mid+1,high);
+        else if (a[mid].compareTo(x)>0) return binarySearch(a,x,low,mid-1);
+        else return mid;
+    }
 }

@@ -14,8 +14,10 @@ public interface ListIPIF<E> extends SequenceIF<E> {
 
     /**
      * Establece la posicion del puntero.
+     * @param pos posicion del puntero
+     * @pre pos <= size() && pos >= 1
      */
-    public void setPointerPosition();
+    public void setPointerPosition(int pos);
 
     /**
      * Inserta un elemento en la posicion del puntero.
