@@ -33,14 +33,13 @@ public class Main {
                     public void reset() {}
                 }
 
-                ClaseInterna ci = new ClaseInterna();
-                return ci;
+                return new ClaseInterna();
             }
 
             @Override
             public int getPointerPosition() {return 0;}
             @Override
-            public void setPointerPosition() {}
+            public void setPointerPosition(int pos) {}
             @Override
             public void insert(String elemento) {}
             @Override
@@ -64,7 +63,7 @@ public class Main {
 
         }
 
-        ListIP cos = new ListIP();
+        ListIP<String> cos = new ListIP();
 
         IteratorIF<String> itr = cos.iterator();
 
