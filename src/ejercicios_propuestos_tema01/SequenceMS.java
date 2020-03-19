@@ -17,6 +17,12 @@ public interface SequenceMS<E> extends CollectionIF<E> {
     public int getMaxSize();
 
     /**
+     * Comprueba si la secuencia de tamaño maximo esta llena.
+     * @return true si se ha alcanzado el tamaño maximo.
+     */
+    public boolean isFull();
+
+    /**
      * @return devuelve un iterador apropiado para la secuencia.
      * No necesita parametros puesto que el recorrido es lineal y unico.
      */

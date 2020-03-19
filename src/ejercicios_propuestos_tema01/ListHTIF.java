@@ -14,7 +14,7 @@ public interface ListHTIF<E> extends SequenceIF<E> {
     public E getHead();
 
     /** Devuelve el resto de elementos de la lista
-     * @pre size()>1, puesto que si no, sería la cabeza
+     * @pre !isEmpty();
      * @return una sublista de la lista principal
      */
     public ListHTIF<E> getTail();
@@ -22,21 +22,23 @@ public interface ListHTIF<E> extends SequenceIF<E> {
     /**
      * @pre !isEmpty()
      * @param element el nuevo valor con el que se modificara la cabeza de la lista.
-     * @return el elemento de la cabeza modificado.
+     * @return la lista recien modificada.
      */
-    public E setHead(E element);
+    public ListHTIF<E> setHead(E element);
 
     /**
-     * @post size()+1
+     * @post new size() = old size()+1
      * @param element el nuevo elemento a introducir en la lista.
-     * @return el elemento que se acaba de introducir.
+     * @return la nueva lista recien formada.
      */
-    public E insertHead(E element);
+    public ListHTIF<E> insertHead(E element);
 
     /**
      * Elimina el primer elemento de la lista (head).
-     * @return el elemento eliminado.
+     * @pre !isEmpty()
+     * @post new size() = old size()-1
+     * @return la nueva lista sin la cabeza anterior.
      */
-    public E removeHead();
+    public ListHTIF<E> removeHead();
 
 }

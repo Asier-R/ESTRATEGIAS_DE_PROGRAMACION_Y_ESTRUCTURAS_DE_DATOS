@@ -22,8 +22,6 @@ public class Main {
         System.out.println("Exponecial recursivo bueno: "+exponencialR(15,3));
         System.out.println("-------------------------------------------");
 
-
-
     }
 
     /**
