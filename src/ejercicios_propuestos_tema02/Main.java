@@ -23,7 +23,7 @@ public class Main {
         System.out.println("-------------------------------------------");
         System.out.println("Exponecial recursivo optimizado: "+potenciaOptimizado(15,3));
         System.out.println("-------------------------------------------");
-
+        System.out.println("Invertin numero 219: "+invertir(219));
     }
 
     /**
@@ -149,6 +149,12 @@ public class Main {
         int rec = potenciaOptimizado(base, exp/2);
         if(exp%2==0)return rec*rec;
         else return base*rec*rec;
+    }
+
+    public static int invertir(int n) { return invertirAux(0,n); }
+    private static int invertirAux(int ac, int n) {
+        if (n == 0 ) { return ac; }
+        return invertirAux(ac*10+(n % 10), n / 10);
     }
 
 }
