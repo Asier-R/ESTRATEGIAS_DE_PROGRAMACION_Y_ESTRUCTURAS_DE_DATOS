@@ -21,6 +21,8 @@ public class Main {
         System.out.println("-------------------------------------------");
         System.out.println("Exponecial recursivo bueno: "+exponencialR(15,3));
         System.out.println("-------------------------------------------");
+        System.out.println("Exponecial recursivo optimizado: "+potenciaOptimizado(15,3));
+        System.out.println("-------------------------------------------");
 
     }
 
@@ -140,6 +142,13 @@ public class Main {
     public static int exponencialR(int base, int exp){
         if(exp<1)return 1;
         return base*exponencialR(base,exp-1);
+    }
+
+    public static int potenciaOptimizado(int base, int exp){
+        if(exp==0)return 1;
+        int rec = potenciaOptimizado(base, exp/2);
+        if(exp%2==0)return rec*rec;
+        else return base*rec*rec;
     }
 
 }
