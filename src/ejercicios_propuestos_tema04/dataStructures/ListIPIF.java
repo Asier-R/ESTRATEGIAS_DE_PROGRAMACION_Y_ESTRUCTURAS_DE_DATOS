@@ -25,18 +25,18 @@ public interface ListIPIF<E> extends SequenceIF<E> {
 
     /**
      * Inserta un elemento en la posicion del puntero.
-     * @param elemento elemento a insertar.
+     * @param element elemento a insertar.
      * @pre 1 <= getPointerPosition() <= size()+1
      * @post new size() = pre size()+1
      */
-    public void insert(E elemento);
+    public void insert(E element);
 
     /**
      * Modifica el valor de la posicion del puntero.
-     * @param elemento nuevo valor a introducir.
+     * @param element nuevo valor a introducir.
      * @pre 1 <= getPointerPosition() <= size()
      */
-    public void set(E elemento);
+    public void set(E element);
 
     /**
      * @pre 1 <= getPointerPosition() <= size()
