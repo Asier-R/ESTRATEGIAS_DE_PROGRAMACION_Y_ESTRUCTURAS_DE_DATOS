@@ -32,4 +32,14 @@ public interface ListIF<E> extends SequenceIF<E> {
      *  comenzando en 1                                         *
 	 * @Pre: 1 <= pos <= size()                                 */
     public void remove (int pos);
+
+	/**
+	 * Ejercicio 05
+	 */
+	public ListIF<E> invierte(ListIF<E> list);
+
+	/**
+	 * Ejercicio 05
+	 */
+	public ListIF<E> invierteIt(ListIF<E> list);
 }

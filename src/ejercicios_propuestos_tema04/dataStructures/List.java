@@ -1,5 +1,6 @@
 package ejercicios_propuestos_tema04.dataStructures;
 
+
 public class List<E> extends Sequence<E> implements ListIF<E> {
 
 	/* Constructor por defecto: crea una lista vacía */
@@ -51,5 +52,31 @@ public class List<E> extends Sequence<E> implements ListIF<E> {
 			previousNode.setNext(nextNode);
 		}
 		this.size--;
+	}
+
+	public ListIF<E> invierte(ListIF<E> list){
+		List lista = new List();
+		for(int i=1; i<list.size()+1; i++){
+			lista.insert(1,list.get(i));
+		}
+		return lista;
+	}
+
+	public ListIF<E> invierteIt(ListIF<E> list){
+		List lista = new List();
+		IteratorIF it = list.iterator();
+		while(it.hasNext()){
+			lista.insert(1, it.getNext());
+		}
+		return lista;
+	}
+
+	public <E extends Comparable<? super E>> boolean isOrderedASC(ListIF<E> lista){
+		for(int i=0; i<lista.size(); i++){
+			if(lista.get(i).compareTo(lista.get(i+1)) > 0){
+				return false;
+			}
+		}
+		return true;
 	}
 }

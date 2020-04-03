@@ -4,8 +4,9 @@ import ejercicios_propuestos_tema04.dataStructures.ListIPIF;
 import ejercicios_propuestos_tema04.dataStructures.Sequence;
 import ejercicios_propuestos_tema04.dataStructures.Stack;
 
-import java.util.NoSuchElementException;
-
+/**
+ * Ejercicio 04
+ */
 public class ListIP<E> extends Sequence<E> implements ListIPIF<E> {
 
     /**
@@ -34,7 +35,9 @@ public class ListIP<E> extends Sequence<E> implements ListIPIF<E> {
 
     @Override
     public void setPointerPosition(int pos) {
-        this.pointer = pos;
+        if(pos < 1) this.pointer = 1;
+        else if(pos > size()+2) this.pointer = size()+1;
+        else this.pointer = pos;
     }
 
     @Override
@@ -85,6 +88,7 @@ public class ListIP<E> extends Sequence<E> implements ListIPIF<E> {
     @Override
     public void remove() {
         remover(pointer);
+        pilaA.pop();
         pilaB = new Stack<E>();
     }
 
@@ -124,13 +128,13 @@ public class ListIP<E> extends Sequence<E> implements ListIPIF<E> {
 
     public void printList(){
         E aux;
-        int len = size();
-        for(int i=0; i<len; i++){
+        int len = size()+1;
+        for(int i=1; i<len; i++){
             aux = pilaA.getTop();
             pilaA.pop();
             pilaB.push(aux);
-            System.out.println("num "+(i+1)+"  : "+aux.toString());
+            System.out.println("num "+i+"  : "+aux.toString());
         }
-        restorer(size());
+        restorer(len);
     }
 }
